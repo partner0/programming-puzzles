@@ -139,6 +139,7 @@ class solver_n
         {
             if ((total_weight_no_fake - total_weight) % primes_list[cnt + NUMBER_OF_PRIMES_BELLOW_REAL_WEIGHT] == 0)
             {
+                //if (solution.multiplicity > 0) cout << "Previous sol: Fake weight found: " + to_string(solution.weight) + " Fake bag found: " + to_string(solution.bag) + " Number of solutions: " + to_string(solution.multiplicity) + "\n";
                 solution.bag = cnt;
                 solution.weight = REAL_WEIGHT - (total_weight_no_fake - total_weight) / primes_list[cnt + NUMBER_OF_PRIMES_BELLOW_REAL_WEIGHT];
                 solution.multiplicity++;
@@ -174,10 +175,10 @@ int main(int argc, char const *argv[])
 
     // Ici, l'isolation de la class solver interdit tout access aux variables locales, notament le poid et le numero du sac.
     // Unique parametre: la pesee
-    solution = solver_n2_logn::solve(total_weight);
+    /*solution = solver_n2_logn::solve(total_weight);
 
     cout << "Fake weight found: " + to_string(solution.weight) + " Fake bag found: " + to_string(solution.bag) + " Number of solutions: " + to_string(solution.multiplicity) + "\n";
-    cout << "Fake weight was: " + to_string(fake_weight) + " Fake bag was: " + to_string(fake_bag) + "\n";
+    cout << "Fake weight was: " + to_string(fake_weight) + " Fake bag was: " + to_string(fake_bag) + "\n";*/
 
     solution = solver_n::solve(total_weight);
 

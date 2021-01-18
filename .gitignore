@@ -31,3 +31,5 @@
 *.out
 *.app
 .DS_Store
+fake-coins-bags/main
+fake-coins-bags/main.dSYM/Contents/Resources/DWARF/main
